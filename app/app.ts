@@ -39,9 +39,9 @@ application.run({ create: () => {
         const constraintSet = new androidx.constraintlayout.widget.ConstraintSet();
 
         data.constraints.forEach(constraint => {
-            if (constraint.attr === "height") {
+            if (constraint.attr === "HEIGHT") {
                 constraintSet.constrainHeight(constraint.item, constraint.const);
-            } else if (constraint.attr === "width") {
+            } else if (constraint.attr === "WIDTH") {
                 constraintSet.constrainWidth(constraint.item, constraint.const);
             } else {
                 constraintSet.connect(
