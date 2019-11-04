@@ -1,0 +1,80 @@
+{
+    "views": [
+        {
+            "type": "Label",
+            "text": "This is a Button",
+            "backgroundColor": "gold",
+            "id": 2
+        },
+        {
+            "type": "Label",
+            "text": "This is a Label",
+            "backgroundColor": "magenta",
+            "id": 1
+        }
+    ],
+    "constraints": [
+        {
+            "item": 2,
+            "attr": "HEIGHT",
+            "const": 300
+        },
+        {
+            "item": 2,
+            "attr": "WIDTH",
+            "const": 300
+        },
+        {
+            "item": 1,
+            "attr": "HEIGHT",
+            "const": 100
+        },
+        {
+            "item": 1,
+            "attr": "WIDTH",
+            "const": 100
+        },
+        {
+            "item": 2,
+            "attr": "LEFT",
+            "to": 0,
+            "toAttr": "LEFT",
+            "const": 100
+        },
+        {
+            "item": 2,
+            "attr": "TOP",
+            "to": 0,
+            "toAttr": "TOP",
+            "const": 100
+        },
+        {
+            "item": 1,
+            "attr": "LEFT",
+            "to": 2,
+            "toAttr": "LEFT",
+            "const": 10
+        },
+        {
+            "item": 1,
+            "attr": "RIGHT",
+            "to": 2,
+            "toAttr": "RIGHT",
+            "const": 10
+        },
+        {
+            "item": 1,
+            "attr": "TOP",
+            "to": 2,
+            "toAttr": "TOP",
+            "const": 10
+        },
+        {
+            "item": 1,
+            "attr": "BOTTOM",
+            "to": 2,
+            "toAttr": "BOTTOM",
+            "const": 10
+        }
+    ]
+}
