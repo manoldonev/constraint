@@ -1,11 +1,9 @@
-import { LayoutBase } from "tns-core-modules/ui/layouts/layout-base";
+import { ConstraintLayoutBase } from "./constraint-layout-common";
 
-export class ConstraintLayout extends LayoutBase {
+export class ConstraintLayout extends ConstraintLayoutBase {
     nativeViewProtected: androidx.constraintlayout.widget.ConstraintLayout;
 
     public createNativeView() {
         return new androidx.constraintlayout.widget.ConstraintLayout(this._context);
     }
-
-
 }

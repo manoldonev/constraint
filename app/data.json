@@ -57,23 +57,9 @@
         },
         {
             "item": 1,
-            "attr": "RIGHT",
-            "to": 2,
-            "toAttr": "RIGHT",
-            "const": 10
-        },
-        {
-            "item": 1,
             "attr": "TOP",
             "to": 2,
             "toAttr": "TOP",
-            "const": 10
-        },
-        {
-            "item": 1,
-            "attr": "BOTTOM",
-            "to": 2,
-            "toAttr": "BOTTOM",
             "const": 10
         }
     ]

@@ -1,0 +1,6 @@
+{
+    "name": "constraint-layout",
+    "main": "constraint-layout",
+    "types": "constraint-layout.d.ts"
+  }
+  
