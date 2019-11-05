@@ -1,6 +1,7 @@
 import * as application from "tns-core-modules/application";
 import { isAndroid } from "tns-core-modules/platform";
 import { Color } from "tns-core-modules/color";
+import { layout } from "tns-core-modules/ui/core/view-base";
 
 import { ConstraintLayout } from "./constraint-layout";
 import * as data from "./data.json";
@@ -20,7 +21,7 @@ application.run({
             const instanceType = module[dataView.type] || Object;
             const view = new instanceType();
             view.text = dataView.text;
-            view.backgroundColor = new Color(dataView.backgroundColor);
+            view.backgroundColor = dataView.backgroundColor;
             view.id = dataView.id;
             views.push(view);
         });
@@ -44,16 +45,16 @@ application.run({
 
                 data.constraints.forEach(constraint => {
                     if (constraint.attr === "HEIGHT") {
-                        constraintSet.constrainHeight(constraint.item, constraint.const);
+                        constraintSet.constrainHeight(constraint.item, constraint.margin);
                     } else if (constraint.attr === "WIDTH") {
-                        constraintSet.constrainWidth(constraint.item, constraint.const);
+                        constraintSet.constrainWidth(constraint.item, constraint.margin);
                     } else {
                         constraintSet.connect(
                             constraint.item,
                             androidx.constraintlayout.widget.ConstraintSet[constraint.attr],
                             constraint.to === 0 ? androidx.constraintlayout.widget.ConstraintSet.PARENT_ID : constraint.to,
                             androidx.constraintlayout.widget.ConstraintSet[constraint.toAttr],
-                            constraint.const
+                            constraint.margin
                         );
                     }
                 });
@@ -84,7 +85,7 @@ application.run({
                             null,
                             NSLayoutAttribute.NotAnAttribute,
                             1,
-                            constraint.const
+                            layout.toDeviceIndependentPixels(constraint.margin)
                         );
 
                         heightConstraint.active = true;
@@ -96,7 +97,7 @@ application.run({
                             null,
                             NSLayoutAttribute.NotAnAttribute,
                             1,
-                            constraint.const
+                            layout.toDeviceIndependentPixels(constraint.margin)
                         );
 
                         widthConstraint.active = true;
@@ -115,7 +116,7 @@ application.run({
                             relativeView.nativeViewProtected,
                             convertToLayoutAttribute(constraint.toAttr),
                             1,
-                            constraint.const
+                            layout.toDeviceIndependentPixels(constraint.margin)
                         );
 
                         locationConstraint.active = true;

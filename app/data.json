@@ -17,50 +17,50 @@
         {
             "item": 2,
             "attr": "HEIGHT",
-            "const": 300
+            "margin": 300
         },
         {
             "item": 2,
             "attr": "WIDTH",
-            "const": 300
+            "margin": 300
         },
         {
             "item": 1,
             "attr": "HEIGHT",
-            "const": 100
+            "margin": 100
         },
         {
             "item": 1,
             "attr": "WIDTH",
-            "const": 100
+            "margin": 100
         },
         {
             "item": 2,
             "attr": "LEFT",
             "to": 0,
             "toAttr": "LEFT",
-            "const": 100
+            "margin": 100
         },
         {
             "item": 2,
             "attr": "TOP",
             "to": 0,
             "toAttr": "TOP",
-            "const": 100
+            "margin": 100
         },
         {
             "item": 1,
             "attr": "LEFT",
             "to": 2,
             "toAttr": "LEFT",
-            "const": 10
+            "margin": 10
         },
         {
             "item": 1,
             "attr": "TOP",
             "to": 2,
             "toAttr": "TOP",
-            "const": 10
+            "margin": 10
         }
     ]
 }
